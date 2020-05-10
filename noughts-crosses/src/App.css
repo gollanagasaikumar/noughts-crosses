@@ -1,0 +1,194 @@
+.container {
+  display: grid;
+  grid-template-columns: 22% 56% 22%; /* fraction*/
+  height:90vh;
+  
+}
+.rowStyle
+{
+padding-top:3%;
+padding-left:14%;
+padding-right:6%;
+
+}
+.lost
+{
+	color:red;
+}
+.won
+{
+	color:green;
+}
+.played
+{
+	color:blue;
+}
+.playername
+{
+	color:orange;
+}
+.opponentBox1
+{
+	border:1px solid black;
+	text-align:center;
+	font-weight:bold;
+	margin-left:14%;
+	padding-top:16%
+}
+.opponentBox2
+{
+	border:1px solid black;
+	text-align:center;
+	font-weight:bold;
+	margin-right:10%;
+	padding-top:16%
+}
+
+
+.cancelandplaybuttons{
+	width:25%;
+	float:left;
+	padding-right:0%
+}
+.cancelandplaybuttons1{
+	width:25%;
+	float:left;
+	padding-right:0%
+}
+.gamestatus-bar
+{
+	width:48%;
+	float:left;
+	padding-top:1%;
+	padding-bottom:1%;
+	text-align:center;
+}
+
+
+.shadoweffect {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 0px 10px 10px 10px #888888;
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 110%;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  float:right;
+  border-radius:50px;
+  outline:none;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+
+.status-bar{
+text-align:center;
+padding-top:2%
+}
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 340%;
+}
+
+.allignment
+{
+width:25%;
+border:1px solid black;
+float:left;
+text-align:center;
+height:80vh
+}
+
+         .leftbox { 
+                float:left;  
+                background:white; 
+                width:30%; 
+                height:22vh; 
+				border:0.5px solid black;
+				transition: transform .2s;
+				
+            } 
+		.leftbox:hover {
+  -ms-transform: scale(0.8); /* IE 9 */
+  -webkit-transform: scale(0.8); /* Safari 3-8 */
+  transform: scale(0.8); 
+}
+            .middlebox{ 
+                float:left;  
+                background:Green; 
+                width:10%; 
+                height:120px; 
+            } 
+            .rightbox{ 
+                float:left; 
+                background:blue; 
+                width:10%; 
+                height:120px; 
+            }
+
+.allignment1
+{
+width:25%;
+border:1px solid black;
+float:right;
+text-align:center;
+height:80vh
+}			
+            h1{ 
+                color:green; 
+                text-align:center; 
+            } 
+.bg{	
+background-image: url('background.jpg');
+}	
+.four{
+  width:100%;
+  height:40vh;
+background:darkblue;
+color:white;
+}
+.five{
+  width:100%;
+  height:40vh;
+background:blue;
+}
