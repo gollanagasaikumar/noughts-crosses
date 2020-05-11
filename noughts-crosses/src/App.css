@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 22% 56% 22%; /* fraction*/
-  height:90vh;
+  height:96vh;
   
 }
 .rowStyle
@@ -181,6 +181,9 @@ height:80vh
 .bg{	
 background-image: url('background.jpg');
 }	
+
+
+
 .four{
   width:100%;
   height:40vh;
@@ -191,4 +194,69 @@ color:white;
   width:100%;
   height:40vh;
 background:blue;
+}
+
+.f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+  margin-top:10%;
+}
+
+.f2_container {
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+  margin-top:10%;
+}
+.f2_container {
+  perspective: 1000;
+}
+.f1_container {
+  perspective: 1000;
+}
+.f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+.f1_container:hover .f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+    background-color: #F0F0F0;
+    
+}
+
+
+.LoadingClass {
+	width: 40%;
+	height: 60%;
+	background-color: red;
+	margin-top:20%;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	text-align:center;
+	margin: auto;
 }

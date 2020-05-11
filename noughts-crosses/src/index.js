@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import X from "./X.jpg";
 import O from "./O.jpg";
+import wingif from "./winning.gif";
+import tiegif from "./tie.gif"
 import background from './background.jpg'
-import {GameBox} from './gamebox.js'
+import Welcome from './loading.js'
 
 
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
@@ -248,7 +250,16 @@ check()
 {
 	
 }
-
+ congrats(param)
+ {
+	 var srcpath;
+	 var imgsrc = param === "1" ? srcpath = tiegif: srcpath =  wingif
+	 document.getElementById("hoverclass").className = "f1_container"
+	 document.getElementById("greetingimage").src = srcpath
+	 setTimeout(() => {document.getElementById("hoverclass").className = "f2_container"
+	 document.getElementById("hoverclass").style.pointerEvents = 'auto';
+	 }, 3000);
+ }
   render() {
 	  let status = " "
 	  let gamestats = winnerCheck(this.state.squares)
@@ -257,25 +268,37 @@ check()
 	if(gamestats  === "Tie Game")
 	{
 	status = "It's a Tie Game"
+	this.congrats("1")
 	}
 	else
 	{
 		console.log("stats"+this.state.value)
 		this.check()
     status = gamestats === "Game Completed" ?  "Player " + this.state.value + " Won Game" : (this.state.value === "X" ? "Next Player : O" : "Next Player : X" )
+	var stu = gamestats === "Game Completed" ? this.congrats("0"): 0
+	
+	
 	}
     return (
       <div class="container">
 		<Playerone value = {this.state.winstatus} value1 = {status} value2 = {this.state.squares}/>
+		
 		<div>
+
+		
 		<div style={{width:"100%",marginTop:"2%"}}>
 		<div className="cancelandplaybuttons" onClick={() => this.restartgame()}><button class="button button3">Quit Game</button></div>
 		<div className="gamestatus-bar"><div className="status-bar"><h3> &nbsp; &nbsp; {status} </h3></div></div>
 		<div className="cancelandplaybuttons1" >{this.replaygame()}</div>
 		</div>
-        
-        <div className="rowStyle">
 		
+		
+<div id = "hoverclass" className="f2_container">
+<div className="f1_card" >		
+		
+		<div className="front face">
+		
+        <div className="rowStyle">
           {this.renderSquare(0)}{this.renderSquare(1)}{this.renderSquare(2)}
         </div>
         <div className="rowStyle">
@@ -284,7 +307,25 @@ check()
         <div className="rowStyle">
           {this.renderSquare(6)}{this.renderSquare(7)}{this.renderSquare(8)}
         </div>
+		
 		</div>
+		
+		
+		
+			<div  className="back face center bg">
+<img id="greetingimage" src={wingif} alt="Paris" style={{width:"100%",height:"100%"}}></img>
+			</div>
+	
+		</div>
+		
+	</div>
+		
+		
+</div>
+		
+		
+		
+		
 		 <Playertwo value = {this.state.winstatus} value1 = {status} value2 = {this.state.squares}/>
       </div>
     );
@@ -434,16 +475,40 @@ export class Playertwo extends React.Component {
 }
 
 
-class Football extends React.Component {
+
+class Celebration extends React.Component {
 
 
  
   render() {
 	  
 	  
+    return (<b>Naga Sai </b>)
+  }
+}
+
+
+
+class Football extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      x: <Welcome />
+    }
+  }
+	    componentDidMount(){
+	setTimeout(() => {this.setState({x:<Board />})}, 3000);
+    
+  }
+ 
+  render() {
+	  
+
     return (
 <div className={"bg"}>  
-	<Board />
+  <div>{this.state.x}</div>
+
+	
 
 	</div>  
 	  
