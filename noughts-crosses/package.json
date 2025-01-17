@@ -14,7 +14,7 @@
     "express": "^4.17.1",
     "html-webpack-plugin": "^4.2.1",
     "mongodb": "^3.5.7",
-    "mongoose": "^5.9.13",
+    "mongoose": "^8.9.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
